@@ -25,7 +25,8 @@ function sumarGrupos(arrayGrupos)
 		arraySumas.push(iterarGrupo(i,arrayGrupos));
 	}
 	let vector = evaluarSuma(arraySumas,arrayGrupos);
-	return vector;
+	let cadena = convertirACadena(vector);
+	return cadena;
 }
 
 
@@ -76,6 +77,17 @@ function iterarSuma(arrayGrupos,muestra)
 	{
 		return true;
 	}
+}
+
+/*Convierte array en cadena*/
+function convertirACadena(vector) 
+{
+	let cadena = "";
+	for (var n = 0; n < vector.length; n++) 
+	{
+		cadena = cadena+vector[n]+",";
+	}
+	return cadena;
 }
 
 
